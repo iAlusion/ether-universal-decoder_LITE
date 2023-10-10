@@ -7,7 +7,11 @@ You can simply implement these functions by requiring/importing them and call th
 ## Requirements
 
     - Node.js
-    - Ethers.js^6.7
+    - Ethers V6
+
+## Installing
+
+npm install eud_lite
 
 ## Pros and Cons
 
@@ -28,10 +32,10 @@ You can simply implement these functions by requiring/importing them and call th
 
 ```js
 /* esmodule  */
-import eud from 'ethers-universal-decoder_lite';
+import eud from 'eud_lite';
 
 /* commonJS */
-const eud = require('ethers-universal-decoder_lite');
+const eud = require('eud_lite');
 
 const contract = await eud.buildContract(<contractAddress>, <EtherscanApiKey>); <Promise>
 ```
