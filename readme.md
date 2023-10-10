@@ -25,9 +25,24 @@ npm install eud_lite
 ### Cons
 
     - Not every ABI will work
-    - From time to time missing functions on ABI due to fetching from etherscan
+
+        This is due to Etherscan.io and their response towards unverified contract sources. There is as far as I know sadly no work around for this.
+    
+    - From time to time missing functions on fetched ABI
+
+        There is a workaround for this, this is added to the full version. It is an process that needs to be carefully attended. Ensuring you are using the proper functions is highly important. I can only guarantee that, if I preset all data in a cache.
+      
     - Needs some skills to implement this on a automatic level
+
+        For instance; implementing it on a provider that listens to any live events. You would best implement it by adding a place to store all known contracts in your program.
+
     - No workarounds that are being added to the full version
+
+        Lightweight comes with a cost
+
+    - Contracts that make use of a single function to execute various commands can have impact on the result of the automatic parsing.
+
+        An example would be Uniswap, they use a single function on the router to execute multiple commands. Although this is not an issue in general, it is an issue when fetching ABIs to decode with known input to the ABI. This is due to the params will be for Uniswap [bytes, bytes[], uint256]. The decoder will decode the bytes which in turn still need to be decoded again with matching input from the Uniswap Router. A quick fix would be adding another decode function when the result is parsed on the Uniswap Universal Router known addresses. Most contracts will not have this issue.
 
 ## Usage
 
