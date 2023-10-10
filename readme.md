@@ -4,6 +4,10 @@ This is the lite version of ether-universal-decoder. It only comes with the basi
 I specially created this for the lightweight developers that prefer their own ways.
 You can simply implement these functions by requiring/importing them and call them.
 
+Join my Discord server for more updates, upcoming packages, issues, or any thoughts or such regarding ether-universal-decoder.
+
+    https://discord.gg/5zbS2p8Vh7
+
 ## Requirements
 
     - Node.js
@@ -70,6 +74,12 @@ const eud = require('eud_lite');
 
 const contract = await eud.buildContract(<contractAddress>, <EtherscanApiKey>); <Promise>
 ```
+
+## Issues
+
+Please do report any issues to me on Discord in my server. 
+
+    https://discord.gg/5zbS2p8Vh7
 
 ## Future updates
 
