@@ -8,6 +8,7 @@ You can simply implement these functions by requiring/importing them and call th
 
     - Node.js
     - Ethers V6
+    - Etherscan.io API key
 
 ## Installing
 
